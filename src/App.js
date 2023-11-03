@@ -4,7 +4,7 @@ import Accueil from './compsont/Accueil'
 
 export default function App() {
   return (
-    <div>
+    <div className='w-full'>
       <Accueil/>
     </div>
   )

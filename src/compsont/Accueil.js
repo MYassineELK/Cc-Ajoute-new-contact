@@ -46,8 +46,8 @@ export default function Accueil() {
     <div className="container">
         <br />
      <div className="flex justify-between">
-     <div class="mb-3 w-1/3 mx-5">
-  <div class="relative mb-4 flex w-full  flex-wrap items-stretch">
+     <div class="mb-3 w-1/3 ml-7 sm:mr-8 sm:w-full ">
+  <div class="relative mb-4 flex w-44 sm:w-full flex-wrap items-stretch">
     <input
       type="search"
       class="relative m-0 -mr-0.5 block w-[1px] min-w-0 flex-auto rounded-l  border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
@@ -74,13 +74,13 @@ export default function Accueil() {
     </button>
   </div>
 </div>
-     <button onClick={ajout} type="button" className="w-1/3 flex h-11 justify-center rounded bg-red-700 px-6 pb-2 pt-2.5 text-lg font-medium  leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" data-te-ripple-init data-te-ripple-color="light">
-     Ajoute new contact
+     <button onClick={ajout} type="button" className="w-15 mr-7 sm:w-1/3  flex h-10 justify-center rounded bg-red-700 px-6 pb-2 pt-2.5 text-lg font-medium  leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]" data-te-ripple-init data-te-ripple-color="light">
+     Ajoute 
     </button>
      </div><br />
      <h1 className="text-center text-3xl"  style={{display:affiche?"none":""}}  >List de contact</h1> <br />
-     <div className=' container grid grid-cols-4 '>
-     {ajoutee.map((el)=><div key={el.id} className='w-2/3 mb-4 '><Contact id={el.id} sup={sup} desplay={affiche} nom={el.nom} télé={el.tele} email={el.email}/></div>)}
+     <div className=' container grid grid-cols-1  sm:grid-cols-3 '>
+     {ajoutee.map((el)=><div key={el.id} className='w-2/3 mx-auto mb-4 '><Contact id={el.id} sup={sup} desplay={affiche} nom={el.nom} télé={el.tele} email={el.email}/></div>)}
      </div>
      <Ajoute desplay={affiche} sup={ajout} add={add}/>
     </div>
